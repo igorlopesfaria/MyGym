@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_activity_exercise">Lista de Exercícios</string>
+    <string name="first_fragment_label">Fragment List</string>
+    <string name="no_exercise_title">Lista vazia</string>
+    <string name="no_exercise_subtitle">Nenhum exercício cadastrado no momento.</string>
+    <string name="erro_list_exercise_subtitle">Não foi possível listar os exercícios nesse momento.</string>
+    <string name="erro_list_exercise_title">Ops! Deu Erro.</string>
+    <string name="loading_exercise">Carregando exercícios</string>
+</resources>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/error_view"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/error_image"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toTopOf="@+id/error_message_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/space_view_extra"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="false"
+        app:lottie_fileName="error.json" />
+
+    <TextView
+        android:id="@+id/error_message_title"
+        style="@style/MyGym.Text.BigTitle.Bold.BaseDark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_view_big"
+        android:gravity="center"
+        android:layout_marginStart="@dimen/space_view_medium"
+        android:layout_marginEnd="@dimen/space_view_medium"
+        tools:text="Parece que você está sem conexão" />
+
+    <TextView
+        android:id="@+id/error_message_subtitle"
+        style="@style/MyGym.Text.Body.Regular.Base75"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_view_medium"
+        android:layout_marginEnd="@dimen/space_view_medium"
+        android:layout_marginTop="@dimen/space_view_small"
+        android:gravity="center"
+        tools:text="Verifique sua internet e tente novamente" />
+
+    <br.com.mygym.uitoolkit.button.LoaderButton
+        style="@style/MyGym.Widget.Button.Secondary"
+        android:id="@+id/button_retry"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_custom_button"
+        android:visibility="visible"
+        app:uitoolkit_title="Tentar Novamente"
+        app:uitoolkit_style="secondary"
+        android:layout_marginStart="@dimen/space_view_medium"
+        android:layout_marginEnd="@dimen/space_view_medium"
+        android:layout_marginTop="@dimen/space_view_extra"/>
+
+</LinearLayout>

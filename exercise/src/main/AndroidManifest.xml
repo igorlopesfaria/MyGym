@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.com.mygym.exercise">
+
+    <application>
+        <activity
+            android:name=".view.ExerciseActivity"
+            android:label="@string/title_activity_exercise"
+            android:windowSoftInputMode="stateHidden"
+            android:theme="@style/Theme.MyGym">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="@string/app_deep_link_scheme"
+                    android:host="exercise"
+                    android:path="/list" />
+            </intent-filter>
+
+        </activity>
+    </application>
+
+</manifest>

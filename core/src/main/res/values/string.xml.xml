@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Deeplinking -->
+    <string name="app_deep_link_scheme" translatable="false">mygym</string>
+    <string name="deep_link_format" translatable="false">mygym://%1s</string>
+    <string name="common_try_again">Tentar Novamente</string>
+
+</resources>

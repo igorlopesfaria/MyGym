@@ -1,0 +1,8 @@
+include ':training'
+include ':checkin'
+include ':exercise'
+include ':core'
+include ':ui-toolkit'
+include ':sdk'
+include ':app'
+rootProject.name = "MyGym"

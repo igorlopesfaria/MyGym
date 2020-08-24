@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingStart="@dimen/space_view_big"
+    android:paddingEnd="@dimen/space_view_big"
+    android:paddingTop="@dimen/space_view_medium">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/dumbellIMG"
+        android:layout_width="@dimen/dimen_icon_small"
+        android:layout_height="@dimen/dimen_icon_small"
+        android:src="@drawable/ic_dumbell"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/nameTXV"
+        app:layout_constraintTop_toTopOf="@+id/nameTXV" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/nameTXV"
+        style="@style/MyGym.Text.Caption.Bold.BaseDark"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/dumbellIMG"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="@dimen/space_view_big"
+        tools:text="Rosca direta" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/muscleTXV"
+        style="@style/MyGym.Text.Caption.Regular.Base75"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:layout_marginTop="@dimen/space_view_little"
+        android:layout_marginStart="@dimen/space_view_big"
+        android:layout_marginBottom="@dimen/space_view_medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dumbellIMG"
+        app:layout_constraintTop_toBottomOf="@+id/nameTXV"
+        tools:text="Músculo: Peitoral" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_divider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="@dimen/space_view_medium"
+        android:layout_marginEnd="@dimen/space_view_medium"
+        android:background="@color/base_25"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

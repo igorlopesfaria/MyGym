@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="uitoolkit_title" format="string" />
+    <attr name="uitoolkit_subtitle" format="string" />
+    <attr name="uitoolkit_enabled" format="boolean" />
+    <attr name="uitoolkit_hint" format="string" />
+    <attr name="uitoolkit_focusable" format="boolean" />
+
+    <declare-styleable name="uitoolkit_Theme">
+        <attr name="uitoolkit_loaderButtonStyle" format="reference" />
+        <attr name="uitoolkit_retriableErrorView" format="reference" />
+        <attr name="uitoolkit_clearableEditText" format="reference" />
+        <attr name="uitoolkit_emptyView" format="reference" />
+        <attr name="uitoolkit_loadingView" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="uitoolkit_LoaderButton">
+        <attr name="uitoolkit_title" />
+        <attr name="uitoolkit_enabled" />
+        <attr name="uitoolkit_style" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="secondary" value="1" />
+            <enum name="transparent" value="2" />
+            <enum name="alert" value="3" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="uitoolkit_clearableEditText">
+        <attr name="uitoolkit_hint" />
+        <attr name="uitoolkit_show_cancel_button" format="boolean"/>
+        <attr name="uitoolkit_focusable" />
+        <attr name="uitoolkit_enabled" />
+    </declare-styleable>
+
+    <declare-styleable name="uitoolkit_retriableErrorView">
+        <attr name="uitoolkit_title" />
+        <attr name="uitoolkit_subtitle" />
+        <attr name="uitoolkit_buttonStyle" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="secondary" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="uitoolkit_emptyView">
+        <attr name="uitoolkit_title" />
+        <attr name="uitoolkit_subtitle" />
+    </declare-styleable>
+
+    <declare-styleable name="uitoolkit_loadingView">
+        <attr name="uitoolkit_loading_text"  format="string"/>
+    </declare-styleable>
+
+</resources>

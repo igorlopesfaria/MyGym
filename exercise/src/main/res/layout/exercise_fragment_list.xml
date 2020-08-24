@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:focusableInTouchMode="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/exercise_content_appbar_search" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/exerciseList"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                tools:listitem="@layout/exercise_item_list"
+                android:visibility="visible"
+                tools:itemCount="2"/>
+
+            <br.com.mygym.uitoolkit.view.LoadingView
+                android:id="@+id/contentLoading"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/space_view_big"
+                android:visibility="visible"
+                app:uitoolkit_loading_text="@string/loading_exercise"
+                android:layout_marginBottom="@dimen/height_toolbar_standard"
+                tools:visibility="gone" />
+
+            <br.com.mygym.uitoolkit.view.EmptyView
+                android:id="@+id/contentEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/space_view_big"
+                android:visibility="gone"
+                android:layout_marginBottom="104dp"
+                app:uitoolkit_title="@string/no_exercise_title"
+                app:uitoolkit_subtitle="@string/no_exercise_subtitle"
+                tools:visibility="gone" />
+
+            <br.com.mygym.uitoolkit.view.RetriableErrorView
+                android:id="@+id/contentError"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/space_view_big"
+                android:visibility="gone"
+                app:uitoolkit_subtitle="@string/erro_list_exercise_subtitle"
+                app:uitoolkit_title="@string/erro_list_exercise_title"
+                tools:visibility="gone" />
+        </FrameLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
