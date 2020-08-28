@@ -10,4 +10,14 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="confirm">Confirmar</string>
+    <string name="back">Costas</string>
+    <string name="biceps">Bíceps</string>
+    <string name="triceps">Tríceps</string>
+    <string name="chester">Peitoral</string>
+    <string name="shoulder">Ombro</string>
+    <string name="legs">Perna</string>
+    <string name="muscle">Músculo Trabalhado</string>
+    <string name="exercie_name">Rosca direta</string>
+    <string name="exercise">Exercício</string>
+    <string name="name">Nome</string>
 </resources>

@@ -13,23 +13,176 @@
         android:layout_height="@dimen/height_drag_indicator"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/drag_indicator"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/space_view_small"
+        android:layout_marginBottom="@dimen/space_view_small"
+        app:layout_constraintBottom_toTopOf="@id/exerciseTitleTXV"/>
 
     <!-- Close button -->
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/closeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/space_view_big"
         android:background="@android:color/transparent"
-        app:layout_constraintBottom_toTopOf="@+id/loaderButton"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/space_view_medium"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="@dimen/space_view_small"
+        android:layout_marginEnd="@dimen/space_view_medium"
+        app:layout_constraintBottom_toTopOf="@id/exerciseTitleTXV"
         app:srcCompat="@drawable/ic_baseline_close_main_color" />
 
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/exerciseTitleTXV"
+        style="@style/MyGym.Text.BigTitle.Bold.BaseDark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/exercise"
+        app:layout_constraintBottom_toTopOf="@+id/hintEmailTextView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="@dimen/space_view_medium"
+        android:layout_marginEnd="@dimen/space_view_medium"
+        android:layout_marginBottom="@dimen/space_view_medium"
+        tools:viewBindingIgnore="true" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/hintEmailTextView"
+        style="@style/MyGym.Text.Caption.Regular.Base75"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_view_medium"
+        android:layout_marginEnd="@dimen/space_view_medium"
+        android:text="@string/name"
+        android:layout_marginBottom="@dimen/space_view_little"
+        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:viewBindingIgnore="true" />
+    <EditText
+        android:id="@+id/editText"
+        style="@style/MyGym.Widget.EditText.ClearableEditText"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/height_edittext"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/muscleLayout"
+        android:layout_marginStart="@dimen/space_view_medium"
+        android:layout_marginEnd="@dimen/space_view_medium"
+        android:layout_marginBottom="@dimen/space_view_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:ellipsize="end"
+        android:focusableInTouchMode="true"
+        android:hint="@string/exercie_name"/>
+
+    <RelativeLayout
+        android:id="@+id/muscleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/loaderButton"
+        android:layout_marginStart="@dimen/space_view_medium"
+        android:layout_marginEnd="@dimen/space_view_medium"
+        android:layout_marginBottom="@dimen/space_view_extra"
+        android:orientation="vertical"
+>
+
+    <RadioGroup
+        android:id="@+id/muscleRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_card_line"
+        android:layout_alignParentBottom="true"
+        android:paddingStart="@dimen/space_view_small"
+        android:paddingEnd="@dimen/space_view_small"
+        android:paddingTop="@dimen/space_view_medium"
+        android:paddingBottom="@dimen/space_view_medium"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <RadioButton
+                android:id="@+id/radio_back"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                style="@style/MyGym.Text.Body.Regular.Base75"
+                android:layout_weight="1"
+                android:text="@string/back"/>
+
+            <RadioButton
+                android:id="@+id/radio_biceps"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/MyGym.Text.Body.Regular.Base75"
+                android:text="@string/biceps"
+                android:textSize="13sp" />
+
+            <RadioButton
+                android:id="@+id/radio_triceps"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                style="@style/MyGym.Text.Body.Regular.Base75"
+                android:layout_weight="1"
+                android:text="@string/triceps"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/space_view_small"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radio_chester"
+                style="@style/MyGym.Text.Body.Regular.Base75"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/chester"
+                android:textSize="13sp" />
+
+            <RadioButton
+                android:id="@+id/radio_one75Id"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/MyGym.Text.Body.Regular.Base75"
+                android:text="@string/shoulder"
+                android:textSize="13sp" />
+
+            <RadioButton
+                android:id="@+id/radio_one85Id"
+                style="@style/MyGym.Text.Body.Regular.Base75"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/legs"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </RadioGroup>
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/MyGym.Text.Caption.Regular.Base75"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/muscle"
+            android:background="@android:color/white"
+            android:layout_alignParentStart="true"
+            android:paddingStart="@dimen/space_view_small"
+            android:paddingEnd="@dimen/space_view_small"
+            android:layout_marginStart="@dimen/space_view_medium"
+            android:layout_marginTop="-10dp"
+            android:layout_alignTop="@+id/muscleRadioGroup"/>
+
+    </RelativeLayout>
     <br.com.mygym.uitoolkit.button.LoaderButton
         android:id="@+id/loaderButton"
         style="@style/MyGym.Widget.Button"
@@ -41,6 +194,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:uitoolkit_enabled="false"
         app:uitoolkit_style="normal"
         app:uitoolkit_title="@string/confirm" />
 
