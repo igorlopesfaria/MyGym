@@ -11,7 +11,24 @@
         <item name="colorControlActivated">@color/main_color</item>
         <item name="colorControlHighlight">@color/main_color</item>
         <item name="android:navigationBarColor">@android:color/white</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="bottomSheetDialogTheme">@style/Theme.MyGym.BottomSheetDialogTheme</item>
     </style>
+
+    <style name="Theme.MyGym.BottomSheetDialogTheme"
+        parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item> <!-- This is important -->
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:statusBarColor">@color/main_color_dark</item> <!-- And then this will be needed -->
+        <item name="android:navigationBarColor">@android:color/white</item>
+        <item name="bottomSheetStyle">@style/Theme.MyGym.BottomSheetModalStyle</item>
+    </style>
+
+    <style name="Theme.MyGym.BottomSheetModalStyle"
+        parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/top_rounded</item>
+    </style>
+
 
 
 </resources>
