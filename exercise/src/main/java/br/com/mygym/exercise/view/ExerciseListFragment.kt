@@ -1,12 +1,7 @@
 package br.com.mygym.exercise.view
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.annotation.Nullable
 import androidx.lifecycle.Observer
 import br.com.mygym.core.base.BaseActivity
@@ -16,6 +11,7 @@ import br.com.mygym.exercise.R
 import br.com.mygym.exercise.databinding.ExerciseFragmentListBinding
 import br.com.mygym.exercise.model.ExerciseItem
 import br.com.mygym.exercise.view.adapter.ExerciseItemAdapter
+import br.com.mygym.exercise.view.bottomsheet.ExerciseRegisterFragment
 import br.com.mygym.exercise.viewmodel.ExerciseListViewModel
 import org.koin.android.viewmodel.ext.android.viewModel
 
@@ -91,6 +87,15 @@ class ExerciseListFragment: BaseFragment() {
         setupToolbar()
         setupListeners()
         setupObservers()
+
+        showRegisterBottomSheet()
+    }
+
+    private fun showRegisterBottomSheet() {
+        ExerciseRegisterFragment.newInstance().show(
+            requireActivity().supportFragmentManager,
+            ExerciseRegisterFragment.TAG
+        )
     }
 
     private fun setupObservers() {
@@ -108,11 +113,11 @@ class ExerciseListFragment: BaseFragment() {
             is Result.Success -> {
                 binding.contentLoading.visibility = View.GONE
                 binding.contentError.visibility = View.GONE
-                if(result.data.isNotEmpty()){
+                if (result.data.isNotEmpty()) {
                     binding.contentEmpty.visibility = View.GONE
                     binding.exerciseList.visibility = View.VISIBLE
                     adapterExercise.setAllItems(result.data)
-                } else{
+                } else {
                     binding.contentEmpty.visibility = View.VISIBLE
                     binding.exerciseList.visibility = View.GONE
                 }

@@ -7,4 +7,7 @@
     <string name="erro_list_exercise_subtitle">Não foi possível listar os exercícios nesse momento.</string>
     <string name="erro_list_exercise_title">Ops! Deu Erro.</string>
     <string name="loading_exercise">Carregando exercícios</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="confirm">Confirmar</string>
 </resources>
